@@ -1,0 +1,72 @@
+# Instructions to execute the Project
+
+### Environment Setup:
+
+---
+
+* Any IDE that supports Java and its frameworks like (Eclipse, Netbeans, IntelliJ IDEA)
+* Quarkus Framework and its configration.
+* Postgresql connection
+* Postman
+
+---
+
+#### Setting up Quarkus Framework
+
+---
+
+* To Setup Quarkus Framework use the following commands and execute them on the PowerShell:
+
+```
+iex "& { $(iwr https://ps.jbang.dev) } trust add https://repo1.maven.org/maven2/io/quarkus/quarkus-cli/"
+iex "& { $(iwr https://ps.jbang.dev) } app install --fresh --force quarkus@quarkusio"
+```
+
+* Adding Configration to Build project:
+
+  Install "Quarkus Run Configs" from Plugins.
+
+  From "Run" Go to Edit configrations, and add new configration Quarkus (maven).![configQuarkus.JPG](assets/configQuarkus.JPG)
+
+  Now your Quarkus is configured.
+
+  ---
+
+  ### Setting up PostgreSql Connection
+
+  ---
+* ###### create a Database with any name eg "**Task**" that is used for the current project.
+* Edit "src/main/resources/Application.properties" file:
+* ```
+  quarkus.http.port=8082
+  quarkus.datasource.db-kind=postgresql
+  quarkus.datasource.username=postgres
+  quarkus.datasource.password=414339
+
+  quarkus.datasource.jdbc.url=jdbc:postgresql://localhost:5433/task
+  quarkus.datasource.jdbc.max-size=16
+  quarkus.hibernate-orm.database.generation=drop-and-create
+
+  ```
+
+  here you have to make changes wth your own `username` and `Password`
+* if your are using Postgresql 15 then you just replace task with your own database name.
+
+  otherwise if you are using other versions of Postgresql you also need to change the port.
+
+  `quarkus.datasource.jdbc.url=jdbc:postgresql://localhost:5433/task`
+
+replace like `quarkus.datasource.jdbc.url://postgresql://localhost:"your port"/"name of your database"`
+
+at this point your project is ready to execute successfully.
+
+---
+
+Using postman to execute RESTAPIs:
+
+* In Postman use url `http://localhost:8082` to connect to the server.
+* then call the RESTAPI as`:http://localhost:8082/listWithName`
+  if you get the port error it might happen because the post is already in use by system, change port in Application.properties as `quarkus.http.port=8080`
+* After eveything is done you can get the data using APIS a shown below:
+  ![postgreImageexample.JPG](assets/postgreImageexample.JPG)
+*
