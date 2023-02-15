@@ -4,7 +4,7 @@
 
 ---
 
-* Any IDE that supports Java and its frameworks like (Eclipse, Netbeans, IntelliJ IDEA)
+* Any IDE that supports Java and its frameworks like (Eclipse, Netbeans, IntelliJ IDEA) for this project I used IntelliJ IDEA.
 * Quarkus Framework and its configration.
 * Postgresql connection
 * Postman
