@@ -57,8 +57,9 @@ Now your Quarkus is configured.
 
 
 
-* ###### create a Database with any name eg "**Task**" that is used for the current project.
-* Edit "src/main/resources/Application.properties" file:
+* ###### create a Schema with any name eg "**Task**" that is used for the current project.
+
+  Edit "src/main/resources/Application.properties" file:
 * ```
   quarkus.http.port=8082
   quarkus.datasource.db-kind=postgresql
