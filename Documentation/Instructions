@@ -4,15 +4,11 @@ project is to create a web app using java to map and store jSON data in to postg
 
 ---
 
-
-
 # Instructions to execute the Project
 
 ### Environment Setup:
 
 ---
-
-
 
 * Any IDE that supports Java and its frameworks like (Eclipse, Netbeans, IntelliJ IDEA) for this project I used IntelliJ IDEA.
 * Quarkus Framework and its configration.
@@ -25,26 +21,42 @@ project is to create a web app using java to map and store jSON data in to postg
 
 ---
 
-* To Setup Quarkus Framework use the following commands and execute them on the PowerShell:
+To setup Quarkus ,Run the folowing commads:
+
+For Linux, macOS, and Windows (using WSL or bash compatible shell like Cygwin or MinGW)
+
+```
+curl -Ls https://sh.jbang.dev | bash -s - trust add https://repo1.maven.org/maven2/io/quarkus/quarkus-cli/
+curl -Ls https://sh.jbang.dev | bash -s - app install --fresh --force quarkus@quarkusio
+```
+
+For Window PowerShell:
 
 ```
 iex "& { $(iwr https://ps.jbang.dev) } trust add https://repo1.maven.org/maven2/io/quarkus/quarkus-cli/"
 iex "& { $(iwr https://ps.jbang.dev) } app install --fresh --force quarkus@quarkusio"
 ```
 
-* Adding Configration to Build project:
+For more details See the following link:
 
-  Install "Quarkus Run Configs" from Plugins.
+https://quarkus.io/get-started/
 
-  From "Run" Go to Edit configrations, and add new configration Quarkus (maven).![configQuarkus.JPG](assets/configQuarkus.JPG)
+#### * Adding Configration to Build project:
 
-  Now your Quarkus is configured.
+Install "Quarkus Run Configs" from Plugins.
 
-  ---
+From "Run" Go to Edit configrations, and add new configration Quarkus (maven).![configQuarkus.JPG](assets/configQuarkus.JPG)
 
-  ### Setting up PostgreSql Connection
+Now your Quarkus is configured.
 
-  ---
+---
+
+### Setting up PostgreSql Connection
+
+---
+
+
+
 * ###### create a Database with any name eg "**Task**" that is used for the current project.
 * Edit "src/main/resources/Application.properties" file:
 * ```

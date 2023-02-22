@@ -7,7 +7,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@Table(name = "Person")
+@Table(name = "person")
 @ToString
 @NamedQuery(name="getByNames", query="select p from Person p order by p.name")
 @NamedQuery(name="getById", query="select p from Person p where p.id = :id")

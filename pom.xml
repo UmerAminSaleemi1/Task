@@ -88,6 +88,8 @@
                 </executions>
             </plugin>
             <plugin>
+
+
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${compiler-plugin.version}</version>
                 <configuration>
@@ -122,6 +124,7 @@
                                 <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
                                 <maven.home>${maven.home}</maven.home>
                             </systemPropertyVariables>
+
                         </configuration>
                     </execution>
                 </executions>
