@@ -28,7 +28,7 @@ public class PersonService {
     }
 
     public Person getById(long id) {
-        List<Person> pList = em.createNamedQuery("getById").getResultList();
+        List<Person> pList = em.createNamedQuery("getById").setParameter("id", id).getResultList();
         if(pList == null || pList.size() != 1)
             return null;
         return pList.get(0);
